@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "biquery_python_tutorial"
+version = "1.0.0"
+description = "Create tables in Google BigQuery, auto-generate their schemas, and retrieve said schemas."
+authors = ["Todd Birchard <toddbirchard@gmail.com>"]
+maintainers = ["Todd Birchard <toddbirchard@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://hackersandslackers.com/google-bigquery-python/"
+repository = "https://github.com/hackersandslackers/bigquery-python-tutorial/"
+documentation = "https://hackersandslackers.com/google-bigquery-python/"
+keywords = [
+    "BigQuery",
+    "Google Cloud Storage",
+    "SQLAlchemy",
+    "GCP",
+    "Google Cloud"
+]
+
+[tool.poetry.dependencies]
+Python = "^3.8"
+google-cloud-storage = "*"
+google-cloud-bigquery = "*"
+loguru = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry.scripts]
+run = "main:main"
+
+[tool.poetry.urls]
+issues = "https://github.com/hackersandslackers/bigquery-python-tutorial/issues"
