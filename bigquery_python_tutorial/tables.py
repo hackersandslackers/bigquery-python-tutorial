@@ -1,4 +1,4 @@
-"""Fetch tables from Google Cloud project."""
+"""Fetch tables & table schemas."""
 from typing import List, Optional, Sequence, Union, Mapping, Any
 import pprint
 from google.cloud.bigquery.table import Table
@@ -14,6 +14,7 @@ def list_all_tables() -> List[Optional[Table]]:
     :returns: List[Optional[Table]]
     """
     tables = []
+    LOGGER.info("LISTING ALL TABLES IN PROJECT:")
     for dataset in gbq.list_datasets():
         for listed_table in gbq.list_tables(dataset.dataset_id):
             table = get_table(
