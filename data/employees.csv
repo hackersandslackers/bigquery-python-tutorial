@@ -1,4 +1,4 @@
-﻿id,initiated,hiredate,email,firstname,lastname,title,department,location,country,type
+﻿id,initiated_date,hire_date,email,firstname,lastname,title,department,location,country,type
 100035435,2015-12-11T09:16:20.722-08:00,3/22/67,GretchenRMorrow@jourrapide.com,Gretchen,Morrow,Power plant operator,Physical Product,Britling Cafeterias,United Kingdom,Employee
 100056435,2015-12-15T10:11:24.604-08:00,6/22/99,ElizabethLSnow@armyspy.com,Elizabeth,Snow,Oxygen therapist,Physical Product,Grade A Investment,United States of America,Employee
 100037955,2015-12-16T14:31:32.765-08:00,5/31/74,AlbertMPeterson@einrot.com,Albert,Peterson,Psychologist,Physical Product,Grass Roots Yard Services,United States of America,Employee

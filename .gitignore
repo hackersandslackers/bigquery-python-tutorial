@@ -103,13 +103,8 @@ venv.bak/
 .mypy_cache/
 
 # Google Cloud Creds
-HackersAndSlackers-d2a47db89384.json
-HackersAndSlackers-d2a47db89384.json
-HackersAndSlackers-4893023543f3.json
-HackersAndSlackers-59ed81beb2ea.json
-HackersAndSlackers-aec129ee8154.json
-hackersandslackers-204807-a78d7cf1d0d8.json
 *.json
+gcloud.json
 
 # .DS_Store
 .DS_Store
@@ -125,6 +120,3 @@ logs/*
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
-
-# creds
-gcloud.json

@@ -1,15 +1,25 @@
-"""BigQuery Upload Configuration."""
-from os import environ
+"""BigQuery upload Configuration."""
+from os import getenv, path
+from dotenv import load_dotenv
 
 
-# Google Cloud Storage
-bucket_uri = environ.get('GCP_BUCKET_URI')
-bucket_name = environ.get('GCP_BUCKET_NAME')
+# Load variables from .env
+basedir = path.abspath(path.dirname(__file__))
+load_dotenv(path.join(basedir, ".env"))
+
+# GCP Project
+GCP_PROJECT_ID: str = getenv("GCP_PROJECT_ID")
 
 # Google BigQuery
-bigquery_dataset = environ.get('GCP_BIGQUERY_DATASET')
-bigquery_table = environ.get('GCP_BIGQUERY_TABLE')
+GCP_BIGQUERY_TABLE_NAME: str = getenv("GCP_BIGQUERY_TABLE_NAME")
+GCP_BIGQUERY_TABLE_ID: str = getenv("GCP_BIGQUERY_TABLE_ID")
+GCP_BIGQUERY_DATASET_ID: str = getenv("GCP_BIGQUERY_DATASET_ID")
+GCP_BIGQUERY_URI: str = f"bigquery://{GCP_PROJECT_ID}/{GCP_BIGQUERY_DATASET_ID}"
+
+# Google Cloud Storage
+GCP_BUCKET_URI: str = getenv("GCP_BUCKET_URI")
+GCP_BUCKET_NAME: str = getenv("GCP_BUCKET_NAME")
 
 # Data
-local_data_csv = environ.get('LOCAL_DATA_TARGET')
-destination_blob = environ.get('DESTINATION_BLOB_NAME')
+LOCAL_CSV_FILEPATH: str = f"{basedir}/data/employees.csv"
+REMOTE_CSV_DESTINATION: str = "datasets/employees.csv"
