@@ -1,3 +1,4 @@
+"""Create a table from CSV hosted on GCS."""
 from google.cloud.bigquery import SourceFormat, LoadJobConfig
 from google.api_core.exceptions import BadRequest
 from google.cloud.bigquery.table import Table
@@ -5,7 +6,7 @@ from .clients import LOGGER, gbq
 from config import GCP_BUCKET_NAME
 
 
-def gcp_csv_to_table(
+def gcs_csv_to_table(
     project_id: str, dataset_id: str, table_id: str, remote_csv_path: str
 ) -> Table:
     """

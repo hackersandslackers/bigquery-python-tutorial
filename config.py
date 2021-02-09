@@ -1,4 +1,4 @@
-"""BigQuery upload Configuration."""
+"""BigQuery Configuration."""
 from os import getenv, path
 from dotenv import load_dotenv
 
@@ -11,10 +11,8 @@ load_dotenv(path.join(basedir, ".env"))
 GCP_PROJECT_ID: str = getenv("GCP_PROJECT_ID")
 
 # Google BigQuery
-GCP_BIGQUERY_TABLE_NAME: str = getenv("GCP_BIGQUERY_TABLE_NAME")
 GCP_BIGQUERY_TABLE_ID: str = getenv("GCP_BIGQUERY_TABLE_ID")
 GCP_BIGQUERY_DATASET_ID: str = getenv("GCP_BIGQUERY_DATASET_ID")
-GCP_BIGQUERY_URI: str = f"bigquery://{GCP_PROJECT_ID}/{GCP_BIGQUERY_DATASET_ID}"
 
 # Google Cloud Storage
 GCP_BUCKET_URI: str = getenv("GCP_BUCKET_URI")

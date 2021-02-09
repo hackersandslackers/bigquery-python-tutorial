@@ -1,3 +1,4 @@
+"""Upload file to Google Cloud Storage."""
 from typing import Optional
 from google.cloud.storage.blob import Blob
 from .clients import LOGGER, gcs
