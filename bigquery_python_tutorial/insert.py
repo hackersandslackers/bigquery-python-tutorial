@@ -24,14 +24,14 @@ def gcs_csv_to_table(
     """
     try:
         full_table_id = f"{project_id}.{dataset_id}.{table_id}"
-        gcp_uri = f"gs://{GCP_BUCKET_NAME}/{remote_csv_path}"
+        gcs_csv_uri = f"gs://{GCP_BUCKET_NAME}/{remote_csv_path}"
         job_config = LoadJobConfig(
             autodetect=True,
             skip_leading_rows=1,
             source_format=SourceFormat.CSV,
         )
         load_job = gbq.load_table_from_uri(
-            gcp_uri, full_table_id, job_config=job_config
+            gcs_csv_uri, full_table_id, job_config=job_config
         )
         LOGGER.info(f"Starting job {load_job.job_id}.")
         LOGGER.info(load_job.result())  # Waits for table load to complete.
