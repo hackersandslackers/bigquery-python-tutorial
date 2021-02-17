@@ -10,6 +10,7 @@ from config import (
     GCP_BIGQUERY_DATASET_ID,
     GCP_BIGQUERY_TABLE_ID,
     GCP_BUCKET_NAME,
+    GCP_BIGQUERY_FULL_TABLE_ID,
 )
 
 
@@ -19,9 +20,7 @@ def init_script():
     blob = upload_csv_data(LOCAL_CSV_FILEPATH, GCP_BUCKET_NAME, REMOTE_CSV_DESTINATION)
 
     # Insert CSV as new BigQuery table
-    table = gcs_csv_to_table(
-        GCP_PROJECT_ID, GCP_BIGQUERY_DATASET_ID, GCP_BIGQUERY_TABLE_ID, blob.name
-    )
+    table = gcs_csv_to_table(GCP_BIGQUERY_FULL_TABLE_ID, blob.name)
 
     # Print schema of newly created table
     get_table_schema(table)
