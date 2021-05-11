@@ -27,7 +27,7 @@ python-dotenv = "*"
 [tool.poetry.dev-dependencies]
 pytest = "*"
 mypy = "*"
-black = "^20.8b1"
+black = "^21.5b1"
 isort = "^5.6.4"
 flake8 = "^3.8.4"
 
