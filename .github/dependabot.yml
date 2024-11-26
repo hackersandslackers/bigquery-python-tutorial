@@ -1,0 +1,36 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: black
+    versions:
+    - 21.4b0
+    - 21.4b1
+  - dependency-name: google-cloud-storage
+    versions:
+    - 1.35.0
+    - 1.35.1
+    - 1.36.1
+    - 1.36.2
+    - 1.37.0
+    - 1.37.1
+  - dependency-name: python-dotenv
+    versions:
+    - 0.16.0
+  - dependency-name: flake8
+    versions:
+    - 3.9.0
+  - dependency-name: google-cloud-bigquery
+    versions:
+    - 2.7.0
+  - dependency-name: pytest
+    versions:
+    - 6.2.2
+  - dependency-name: loguru
+    versions:
+    - 0.5.3
