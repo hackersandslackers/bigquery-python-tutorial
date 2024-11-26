@@ -28,7 +28,7 @@ python-dotenv = "*"
 pytest = "*"
 mypy = "*"
 black = "^20.8b1"
-isort = "^5.6.4"
+isort = "^5.9.3"
 flake8 = "^3.8.4"
 
 [build-system]
